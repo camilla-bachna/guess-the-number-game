@@ -19,7 +19,7 @@ function buttonHandler(ev) {
     hintElement.innerHTML = "Demasiado alto.";
   } else if (randomNumer > valueInput) {
     hintElement.innerHTML = "Demasiado bajo.";
-  }
+  };
 
   //count intents
   const numberIntentsElement = document.querySelector(".js-numberIntents");
