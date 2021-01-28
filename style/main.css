@@ -1,0 +1,20 @@
+.container{
+    color: rgb(95, 95, 95);
+}
+.form__label{
+    display: block;
+}
+.inputNumber{
+    display: block;
+    margin-top: 10px;
+}
+
+.paragraph{
+    border: 2px solid rgb(201, 194, 194);
+}
+.button {
+    background-color: aqua;
+    border-radius: 4px;
+    color: white;
+    margin-top: 10px;
+}
