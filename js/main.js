@@ -12,7 +12,11 @@ function getRandomNumber(max) {
 const randomNumber = getRandomNumber(100);
 console.log(randomNumber);
 
-function buttonHandler(ev) {
+function hint(message) {
+  hintElement.innerHTML = message;
+}
+
+function handleButton(ev) {
   ev.preventDefault();
 
   checkRandomNumber();
@@ -24,14 +28,14 @@ function checkRandomNumber() {
   let valueInput = parseInt(numberElement.value);
   console.log(valueInput);
 
-  if (valueInput < 1 || valueInput > 100){
-    hintElement.innerHTML = "El número debe estar entre 1 y 100.";
-  }else if(randomNumber === valueInput) {
-    hintElement.innerHTML = "Has ganado campeona!!!";
+  if (valueInput < 1 || valueInput > 100) {
+    hint("El número debe estar entre 1 y 100.");
+  } else if (randomNumber === valueInput) {
+    hint("Has ganado campeona!!!");
   } else if (randomNumber < valueInput) {
-    hintElement.innerHTML = "Demasiado alto.";
+    hint("Demasiado alto.");
   } else if (randomNumber > valueInput) {
-    hintElement.innerHTML = "Demasiado bajo.";
+    hint("Demasiado bajo.");
   }
 }
 
@@ -40,6 +44,6 @@ function countIntents() {
   let value = parseInt(numberIntentsElement.innerHTML);
   value++;
   numberIntentsElement.innerHTML = value;
-}
+};
 
-buttonElement.addEventListener("click", buttonHandler);
+buttonElement.addEventListener("click", handleButton);
